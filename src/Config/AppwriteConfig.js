@@ -1,4 +1,4 @@
-import { Client,Databases } from 'appwrite'
+import { Client,Databases,ID } from 'appwrite'
 import config from './Config'
 
 export const client = new Client()
@@ -6,3 +6,5 @@ export const client = new Client()
     .setProject(config.AppWriteProjectId)
     
 export const databases = new Databases(client);
+
+export const id = ID
