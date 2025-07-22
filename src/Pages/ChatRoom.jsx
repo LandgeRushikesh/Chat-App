@@ -48,8 +48,9 @@ function ChatRoom() {
 
   return (
     <>
-      <div className="chat-room w-[50%] h-full flex flex-col justify-end overflow-y-scroll">
-        {messages.map((message) => (
+      <div className="chat-room w-[50%] h-screen flex flex-col justify-start overflow-y-scroll">
+        <div className="w-full h-full flex flex-col justify-start "> 
+          {messages.map((message) => (
           <div key={message.$id} className="w-full message my-4 p-4 flex justify-between items-center">
             <div>
               <p className="w-fit bg-rose-600 text-white font-semibold text-2xl py-3 px-4 rounded-xl">
@@ -64,8 +65,9 @@ function ChatRoom() {
             </button>
           </div>
         ))}
+        </div>
         <form
-          className="message-ip bg-slate-900 px-5 py-5 w-full flex justify-between items-center text-white rounded-2xl text-xl"
+          className="message-ip sticky bottom-0 bg-slate-900 px-5 py-5 w-full flex justify-between items-center text-white rounded-2xl text-xl"
           onSubmit={(e) => HandleSubmit(e)}
         >
           <input
