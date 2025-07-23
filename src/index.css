@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.chat-room::-webkit-scrollbar{
+.chat::-webkit-scrollbar{
     display: none;
 }
